@@ -31,5 +31,20 @@ namespace Game.Models
       }
       return scoreCounter;
     }
+
+    public string CheckInput()
+    {
+      char[] checkWord = ScrabbleWord.ToCharArray();
+      for (int i = 0; i < checkWord.Length; i++)
+      {
+        bool correct = Char.IsLetter(checkWord[i]);
+        if (correct == false)
+        {
+          throw new System.ArgumentException("Parameter cannot be bullshit", "original");
+          break;
+        }
+      }
+      return ScrabbleWord;
+    }
   }
 }

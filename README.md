@@ -9,13 +9,23 @@
 
 _A console application that takes a word and returns the Scrabble score for that word._
 
+Scoring Key:
+A, E, I, O, U, L, N, R, S, T       1
+D, G                               2
+B, C, M, P                         3
+F, H, V, W, Y                      4
+K                                  5
+J, X                               8
+Q, Z                               10
+
 ## Behavior Driven Project Specifications
 
 | Behavior | Input | Output |
 |:---|:---:|:---:|
-|User orders a menu item|1 Bagel|Order total increases by $2.00|
-|User enters a single item of the daily deal|1 Bread|Order total increases by $5.00|
-|User selects enough sale items to qualify for a deal|3 Breads|Order total increases by $10|
+|Application takes in a string | empty | error|
+| | "12" | error |
+|Application takes in a string and returns points based on words letter value| "at" | 2 |
+| |"dog" | 5 |
 
 ## Setup/Installation Requirements
 
